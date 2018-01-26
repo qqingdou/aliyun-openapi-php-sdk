@@ -39,7 +39,7 @@ class Credential
         if ($this->expiredDate == null) {
             return false;
         }
-        if (strtotime($this->expiredDate)>date($this->dateTimeFormat)) {
+        if (strtotime($this->expiredDate)>strtotime(date($this->dateTimeFormat))) {
             return false;
         }
         return true;
